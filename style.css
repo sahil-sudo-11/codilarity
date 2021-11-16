@@ -16,9 +16,14 @@ body {
   font-size: 17px;
 }
 
+section {
+  margin-bottom: 20vh;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .name {
@@ -33,6 +38,7 @@ body {
 }
 
 .menu {
+  display: none;
   /* border: 2px solid green; */
 }
 
@@ -42,7 +48,7 @@ body {
 
 .hero__title,
 .section__content h1,
-footer h1 {
+.footer h1 {
   margin: 0 auto;
   padding: 2rem;
 
@@ -60,19 +66,48 @@ footer h1 {
 
 .hero__title h1,
 .section__content h1,
-footer h1 {
-  background: -webkit-linear-gradient(#f312cf, #0b7bff);
+.footer h1 {
+  background: linear-gradient(to right, #f312cf, #00b2ff 75%, #00b2ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.hero__title h6,
+.hero__text > h3 span {
+  color: #797979;
+}
+
 .section__content h1,
-footer h1 {
+.footer h1 {
+  font-size: 2.15em;
   text-align: center;
 }
 
+.yourCodeYourCommand {
+  margin: 1rem;
+  border-radius: 15px;
+  background: radial-gradient(#cc00ff, #00b2ff);
+  /* border: 1px solid red; */
+}
+
+.yourCodeYourCommand h3 {
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.yourCodeYourCommand img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  /* border: 3px solid purple; */
+  border-radius: 20px 20px 0 0;
+  padding: 0;
+}
+
 .btn {
-  padding: 1em 2em;
+  padding: 0.75em 2em;
 
   font-size: 1.2rem;
   font-family: "Arial Rounded MT", sans-serif;
@@ -83,7 +118,7 @@ footer h1 {
   border-radius: 1em;
 }
 
-footer .btn {
+.footer .btn {
   margin: 2rem;
 }
 
@@ -100,7 +135,7 @@ footer .btn {
   margin: 0 auto;
   padding: 2rem;
 
-  background: transparent;
+  /* background: transparent; */
 }
 
 .featuresBox {
@@ -126,7 +161,7 @@ footer .btn {
   border-radius: 25px 25px 0 0;
 }
 
-.features h3 {
+.features h5 {
   padding: 0.2rem 1rem;
 }
 
@@ -158,7 +193,177 @@ footer .btn {
   background: linear-gradient(to bottom, #410b91, #000);
 }
 
-footer form {
+.askYourCode {
+  margin: 0 auto;
+  width: 80%;
+
+  margin-bottom: 5em;
+}
+
+.askYourCode img {
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgb(255, 3, 255);
+}
+
+.footer {
+  margin-bottom: 5em;
+}
+
+.footer form {
   display: flex;
   justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero__title h1 {
+    margin-top: 0em;
+    margin-bottom: 0;
+    font-size: 5em;
+    text-align: center;
+    letter-spacing: 0.01em;
+    background: linear-gradient(to bottom right, #f312cf 50%, #00b2ff, #00b2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .name {
+    margin: 3em 5em;
+  }
+
+  .name a {
+    color: white;
+  }
+
+  .logo {
+    font-size: 3em;
+  }
+
+  .section__content h1,
+  .footer h1 {
+    background: linear-gradient(to right, #f312cf 40%, #00b2ff, #00b2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero__title h6 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .hero__title form {
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+  }
+
+  .hero__content {
+    height: auto;
+  }
+
+  .section__content h1,
+  .footer h1 {
+    font-size: 4em;
+  }
+
+  .hero__text {
+    font-size: 3em;
+    padding: 2rem 15rem;
+    text-align: center;
+  }
+
+  .hero__text h3 {
+    margin-top: 3em;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 10em;
+  }
+
+  .codilaritySpan span {
+    background: linear-gradient(to bottom, #ff008a, #eb01ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .wmpSpan span {
+    background: linear-gradient(to bottom, #ff00e5, #00c2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  section {
+    /* height: 100vh; */
+    margin-bottom: 10em;
+  }
+  .footer {
+    height: 100vh;
+  }
+
+  .yourCodeYourCommand {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin: 1em;
+    border-radius: 30px;
+  }
+
+  .yourCodeYourCommand h3 {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+  }
+
+  .yourCodeYourCommand img {
+    width: 60%;
+    margin: 5em 0 0 3em;
+    display: block;
+
+    border-radius: 30px 30px 0 0;
+    /* border: 1px solid red; */
+  }
+
+  .features {
+    border-radius: 40px 40px 0 0;
+  }
+  .features h5 {
+    font-size: 1.5em;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav__list {
+    list-style: none;
+  }
+
+  .nav__item a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1em;
+    font-family: "Lato", "Arial", sans-serif;
+    font-size: 1.47rem;
+    font-weight: lighter;
+  }
+
+  .nav__item:nth-last-child(1) {
+    margin-right: 4em;
+  }
 }
